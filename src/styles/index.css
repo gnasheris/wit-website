@@ -260,7 +260,7 @@ nav {
     top: 15%;
     bottom: 15%;
     width: 1px;
-    background: rgba(196, 176, 232, 0.35);
+    background: rgba(240, 168, 192, 0.4);
 }
 
 .stat-num {
@@ -305,9 +305,191 @@ nav {
 .scroll-line {
     width: 1px;
     height: 36px;
-    background: linear-gradient(to bottom, var(--lavender), transparent);
+    background: linear-gradient(to bottom, var(--blush-mid), transparent);
     animation: scrollPulse 2s 1.5s ease-in-out infinite;
 }
 
 
 /* Buttons - reusable, import at any component */
+.btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--pink);
+    color: #fff;
+    padding: 14px 28px;
+    border-radius: 40px;
+    font-size: 0.88rem;
+    font-weight: 500;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    letter-spacing: 0.02em;
+    font-family: 'DM Sans', sans-serif;
+    transition: background 0.22s, transform 0.22s, box-shadow 0.22s;
+}
+
+.btn-primary:hover {
+    background: var(--pink-deep);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 28px rgba(212, 69, 122, 0.28);
+}
+
+.btn-primary svg {
+    width: 15px;
+    height: 15px;
+    flex-shrink: 0;
+}
+
+.btn-ghost {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255, 252, 253, 0.75);
+    color: var(--pink);
+    padding: 13px 26px;
+    border-radius: 40px;
+    font-size: 0.88rem;
+    font-weight: 500;
+    text-decoration: none;
+    border: 1.5px solid rgba(240, 168, 192, 0.6);
+    cursor: pointer;
+    letter-spacing: 0.02em;
+    font-family: 'DM Sans', sans-serif;
+    backdrop-filter: blur(8px);
+    transition: background 0.22s, border-color 0.22s, transform 0.22s;
+}
+
+.btn-ghost:hover {
+    background: var(--blush);
+    border-color: var(--pink);
+    transform: translateY(-2px);
+}
+
+.btn-light {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(253, 232, 240, 0.15);
+    color: #fce8f0;
+    padding: 14px 30px;
+    border-radius: 40px;
+    font-size: 0.88rem;
+    font-weight: 500;
+    text-decoration: none;
+    border: 1.5px solid rgba(240, 168, 192, 0.4);
+    cursor: pointer;
+    letter-spacing: 0.02em;
+    font-family: 'DM Sans', sans-serif;
+    transition: background 0.22s, transform 0.22s;
+}
+
+.btn-ligth:hover {
+    background: rgba(253, 232, 240, 0.28);
+    transform: translateY(-2px);
+}
+
+/* Pillars */
+.pillars {
+    position: relative;
+    background: var(--cream);
+    padding: 72px 40px 80px;
+    overflow: hidden;
+}
+
+.pillars-inner {
+    max-width: 1080px;
+    margin: 0 auto;
+}
+
+.section-kicker {
+    font-size: 0.7rem;
+    font-weight: 500;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--pink);
+    margin-bottom: 10px;
+}
+
+.section-heading {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(1.9rem, 4vw, 2.8rem);
+    font-weight: 300;
+    color: var(--plum);
+    line-height: 1.15;
+    margin-bottom: 48px;
+}
+
+.section-heading em {
+    font-style: italic;
+    color: var(--pink);
+}
+
+.pillars-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+
+.pillar-card {
+    background: #fff;
+    border: 1px solid rgba(240, 168, 192, 0.22);
+    border-radius: 16px;
+    padding: 30px 26px;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.22s, box-shadow 0.22s;
+}
+
+.pillar-card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2.5px;
+    background: linear-gradient(90deg, var(--blush-mid), var(--pink));
+    opacity: 0;
+    transition: opacity 0.22s;
+}
+
+.pillar-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px rgba(212, 69, 122, 0.1);
+}
+
+.pillar-card:hover::after {
+    opacity: 1;
+}
+
+.pillar-icon {
+    width: 42px;
+    height: 42px;
+    border-radius: 11px;
+    background: var(--blush);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 18px;
+}
+
+.pillar-icon svg {
+    width: 20px;
+    height: 20px;
+    color: var(--pink);
+}
+
+.pillar-card h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: var(--plum);
+    margin-bottom: 8px;
+}
+
+.pillar-card p {
+    font-size: 0.83rem;
+    line-height: 1.65;
+    color: var(--text-soft);
+    font-weight: 300;
+}
