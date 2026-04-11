@@ -1,6 +1,6 @@
 // Replace with real sponsor names when you connect Sanity
 const sponsors = [
-    'Atlassian', 'Google', 'Deloitte', 'ANZ Bank',
+    'Atlassian', 'PwC', 'Deloitte', 'ANZ Bank',
     'REA Group', 'Canva', 'KPMG', 'Accenture',
 ]
 

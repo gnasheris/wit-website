@@ -1,20 +1,19 @@
 'use client'
 
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
 
 export default function Navbar() {
     const [isOpen, setIsOpen] = useState(false)
 
     return (
         <nav>
-            <a className="nav-logo" href="/"><span>Wi</span>T Melbourne</a>
-
+            <a className="nav-logo" href="/"><span>WIT</span> @ UniMelb</a>
             <ul className={isOpen ? 'nav-links open' : 'nav-links'}>
-                <li><a href="/about">About Us</a></li>
-                <li><a href="/events">Events</a></li>
-                <li><a href="/sponsors">Sponsors</a></li>
-                <li><a href="/committee">Committee</a></li>
-                <li><a href="/join" className="cta">Join Us</a></li>
+                <li><Link to="/sponsors">Sponsors</Link></li>
+                <li><Link to="/contact">Contact</Link></li>
+                <li><a href="https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/website/" className="cta"
+                    target="_blank" rel="noopener noreferrer">Join Us</a></li>
             </ul>
 
             <div

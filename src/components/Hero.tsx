@@ -127,9 +127,8 @@ export default function Hero() {
         // ── RESIZE ───────────────────────────────────────────────
         function resize() {
             if (!canvas) return
-            const section = canvas.closest('section') as HTMLElement
-            const w = section.clientWidth
-            const h = section.clientHeight
+            const w = window.innerWidth
+            const h = window.innerHeight
             renderer.setSize(w, h)
             camera.aspect = w / h
             camera.updateProjectionMatrix()
@@ -248,18 +247,38 @@ export default function Hero() {
             <div className="hero-vignette" />
 
             <div className="hero-content">
-                <div className="hero-eyebrow">University of Melbourne · Est. 2018</div>
+                <div className="hero-eyebrow" style={{ marginTop: '200px' }}>
+                    University of Melbourne · Est. 2013</div>
                 <h1 className="hero-title">
-                    Where women in tech<br />
-                    <em>find their people</em>
+                    WIT
                 </h1>
                 <p className="hero-sub">
-                    A community built for women and allies in technology — connecting
-                    students with industry, each other, and the confidence to lead.
+                    Women in Technology
                 </p>
+                {/* Add more social media buttons here */}
                 <div className="hero-actions">
-                    <a href="#" className="btn-primary">Join Us</a>
-                    <a href="#" className="btn-ghost">Learn more</a>
+                    <a
+                        href="https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/website/"
+                        className="btn-primary"
+                        target="_blank"
+                        rel="noopener noreferrer"> Join Us
+                    </a>
+
+                    <div className="hero-socials">
+                        <a href="https://discord.gg/mW5dg4dwcD" target="_blank" rel="noopener noreferrer" className="social-btn">
+                            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/discord.svg" alt="Discord" />
+                        </a>
+                        {/*Insert actual UMSU Logo Here*/}
+                        <a href="https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/website/" target="_blank" rel="noopener noreferrer" className="social-btn">
+                            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/instagram.svg" alt="UMSU" />
+                        </a>
+                        <a href="https://www.instagram.com/witunimelb/" target="_blank" rel="noopener noreferrer" className="social-btn">
+                            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/instagram.svg" alt="Instagram" />
+                        </a>
+                        <a href="https://www.facebook.com/witunimelb" target="_blank" rel="noopener noreferrer" className="social-btn">
+                            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/facebook.svg" alt="Facebook" />
+                        </a>
+                    </div>
                 </div>
             </div>
 
@@ -277,11 +296,6 @@ export default function Hero() {
                     <div className="stat-label">Industry partners</div>
                 </div>
             </div>
-
-            <div className="scroll-hint">
-                <span>Scroll</span>
-                <div className="scroll-line" />
-            </div>
-        </section>
+        </section >
     )
 }
